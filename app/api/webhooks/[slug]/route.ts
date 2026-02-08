@@ -8,15 +8,22 @@ export async function POST(
     const { slug } = await params
     if (webhooksRegistry.includes(slug)) {
         const body = await req.json()
-        console.log(`[/${slug}]`, {
-            method: req.method,
-            headers: Object.fromEntries(req.headers),
-            body,
-          })
-          
+        console.log(
+            `[/${slug}]`,
+            JSON.stringify(
+                {
+                    method: req.method,
+                    headers: Object.fromEntries(req.headers),
+                    body
+                },
+                null,
+                2
+            )
+        )
+
         return new NextResponse('OK', { status: 200 })
     }
-    
+
     return NextResponse.json(
         {
             message:
