@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import webhooksRegistry from '@/config/webhooks.json'
+import webhooksRegistry from '@/config/webhooks'
 
 export async function POST(
     req: NextRequest,
