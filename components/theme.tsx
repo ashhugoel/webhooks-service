@@ -11,7 +11,7 @@ export default function Theme() {
             <div>
                 <Button
                     onClick={setDarkTheme}
-                    className="fixed right-3 top-3 cursor-pointer"
+                    className="fixed right-3 top-3 cursor-pointer "
                     variant="outline"
                     size="icon">
                     {darkTheme ? (

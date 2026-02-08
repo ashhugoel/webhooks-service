@@ -6,7 +6,7 @@ export async function POST(
     { params }: { params: Promise<{ slug: string }> }
 ) {
     const { slug } = await params
-    if (webhooksRegistry.includes(slug)) {
+    if ((webhooksRegistry as string[]).includes(slug)) {
         const body = await req.json()
         console.log(
             `[/${slug}]`,
