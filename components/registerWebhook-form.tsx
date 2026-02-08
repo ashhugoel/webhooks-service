@@ -46,7 +46,9 @@ export function RegisterWebhook({
                                     required
                                 />
                                 <FieldDescription>
-                                    We’ll send POST requests to this URL ( Payload would be console in the vercel terminal ).
+                                    We’ll send POST requests to this URL (
+                                    Payload would be console in the vercel
+                                    terminal ).
                                 </FieldDescription>
                             </Field>
                             <Field>
@@ -57,8 +59,8 @@ export function RegisterWebhook({
                     <div className="bg-primary-foreground p-3 relative hidden md:block ">
                         <Suspense
                             fallback={
-                                <div className='w-full h-full flex justify-center items-center'>
-                                    <Spinner  className='size-10'/>
+                                <div className="w-full h-full flex justify-center items-center">
+                                    <Spinner className="size-10" />
                                 </div>
                             }>
                             <ListWebhooks />

@@ -1,7 +1,12 @@
 import { Item, ItemContent, ItemTitle } from './ui/item'
 
 export async function ListWebhooks() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/webhooks`)
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/webhooks`,
+        {
+            cache: 'no-store'
+        }
+    )
     const data = (await res.json()) as { webhooks: string[] }
 
     if (data.webhooks.length <= 0)
